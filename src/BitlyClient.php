@@ -74,7 +74,7 @@ class BitlyClient
     public function __construct($token = null)
     {
         if ($token !== null) {
-            return $this->_accessToken;
+            $this->accessToken($token);
         }
 
         $this->_apiEndpointUrl = $this->_apiEndpoint . '/' . $this->_apiVersion . '/';
