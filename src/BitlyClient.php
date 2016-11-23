@@ -2,6 +2,9 @@
 
 namespace Bitly;
 
+use BadFunctionCallException;
+use BadMethodCallException;
+use Bitly\Exception\MissingAccessTokenException;
 use GuzzleHttp\Client;
 
 /**
