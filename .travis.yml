@@ -28,14 +28,12 @@ before_script:
   - set +H
 
 script:
-  - sh -c "if [ '$DEFAULT' = '1' ]; then phpunit --stderr; fi"
-
   - sh -c "if [ '$PHPCS' = '1' ]; then ./vendor/bin/phpcs -n -p --extensions=php --standard=PSR2 ./src; fi"
 
   - sh -c "if [ '$CODECOVERAGE' = '1' ]; then phpdbg -qrr vendor/bin/phpunit --coverage-clover=clover.xml || true; fi"
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-  
+
 notifications:
   email: false
