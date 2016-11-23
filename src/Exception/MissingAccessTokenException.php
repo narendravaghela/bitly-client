@@ -2,6 +2,8 @@
 
 namespace Bitly\Exception;
 
+use Exception;
+
 /**
  * MissingAccessTokenException class.  This exception will be thrown from
  * \Bitly\BitlyClient when access token is missing.
