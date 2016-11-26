@@ -15,7 +15,8 @@
         "guzzlehttp/guzzle": "^6.2"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "phpunit/phpunit": "^5.6"
     },
     "autoload": {
         "psr-4": {
