@@ -20,6 +20,12 @@ class Links extends BaseModule
      * - domain: (optional) the short domain to use; either bit.ly, j.mp, or bitly.com or a custom short domain.
      * - format: (optional) Response format (default: json).
      *
+     * For example:
+     *
+     * $bitlyClient = new BitlyClient('Your access token');
+     * $options = ['longUrl' => 'http://www.example.com?foo=bar&john=doe'];
+     * $response = $bitlyClient->shorten($options);
+     *
      * @param array $options List of options for this API method
      * @return mixed API Response
      */
