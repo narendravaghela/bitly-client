@@ -12,11 +12,11 @@ class Links extends BaseModule
 {
 
     /**
-     * Returns  the page title for a given Bitlink
+     * Returns the page title for a given Bitlink
      *
      * The $options array accepts the following keys:
      *
-     * - shortUrl : refers to Bitlink e.g.: http://bit.ly/1RmnUT.
+     * - shortUrl: refers to Bitlink e.g.: http://bit.ly/1RmnUT.
      * - hash: (optional) refers to bitly hashes e.g.: 2bYgqR.
      * - format: (optional) Response format (default: json).
      *
