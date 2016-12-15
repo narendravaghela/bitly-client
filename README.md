@@ -4,7 +4,7 @@
 [![Latest Stable Version](https://poser.pugx.org/narendravaghela/bitly-client/v/stable)](https://packagist.org/packages/narendravaghela/bitly-client)
 [![Total Downloads](https://poser.pugx.org/narendravaghela/bitly-client/downloads)](https://packagist.org/packages/narendravaghela/bitly-client)  
 
-PHP client library to access Bitly APIs. Register your account at [Bitly.com](https://bitly.com/) and get your access token from 
+PHP client library to access Bitly APIs. Register your account at [Bitly.com](https://bitly.com/) and get your access token from [here](https://bitly.com/a/oauth_apps).
 
 ## Requirements
 This library has the following requirements:
@@ -36,7 +36,7 @@ $response = $bitlyClient->shorten($options);
 ```
 
 ### Response format
-Bitly suppoerts json, xml and text response types. You can specify the response type in your `$options` array. The default response format is `json`.
+Bitly suppoerts `json`, `xml` and `txt` response types. You can specify the response type in your `$options` array. The default response format is `json`.
 
 ```php
 <?php
@@ -54,6 +54,7 @@ $options = [
 
 $response = $bitlyClient->shorten($options);
 ```
+We recommend to use `json` and `xml` formats only as `txt` response sometimes does not work.
 
 ## Documentation
 As of now, this library provides API methods for following modules.
