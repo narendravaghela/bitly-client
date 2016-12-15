@@ -7,6 +7,7 @@ use BadMethodCallException;
 /**
  * Links
  *
+ * API methods related to links - see http://dev.bitly.com/links.html
  */
 class Links extends BaseModule
 {
@@ -16,7 +17,7 @@ class Links extends BaseModule
      *
      * The $options array accepts the following keys:
      *
-     * - shortUrl : refers to Bitlink e.g.: http://bit.ly/1RmnUT.
+     * - shortUrl: refers to Bitlink e.g.: http://bit.ly/1RmnUT.
      * - hash: (optional) refers to bitly hashes e.g.: 2bYgqR.
      * - format: (optional) Response format (default: json).
      *
