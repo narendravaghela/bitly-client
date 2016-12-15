@@ -24,4 +24,28 @@ class BitlyClientTest extends TestCase
         $this->assertEquals($bitlyClient->accessToken(), $token);
         unset($bitlyClient);
     }
+
+    /**
+     * testCallFunction method
+     *
+     * @return void
+     */
+    public function testMissingToken()
+    {
+        $this->expectException(\Bitly\Exception\MissingAccessTokenException::class);
+        $bitlyClient = new BitlyClient();
+        $bitlyClient->info();
+    }
+
+    /**
+     * testInvalidMethod method
+     *
+     * @return void
+     */
+    public function testInvalidMethod()
+    {
+        $this->expectException(\BadFunctionCallException::class);
+        $bitlyClient = new BitlyClient('access-token');
+        $bitlyClient->wrongApiMethod();
+    }
 }
