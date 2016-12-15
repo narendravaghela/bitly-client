@@ -50,9 +50,8 @@ class Links extends BaseModule
 
         return $this->processResponse($response);
     }
-	
-	
-	/**
+
+    /**
      * Returns the target (long) URL
      *
      * The $options array accepts the following keys:
