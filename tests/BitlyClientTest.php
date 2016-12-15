@@ -16,5 +16,12 @@ class BitlyClientTest extends TestCase
     {
         $bitlyClient = new BitlyClient();
         $this->assertTrue(is_a($bitlyClient, 'Bitly\BitlyClient'));
+        $this->assertEmpty($bitlyClient->accessToken());
+        unset($bitlyClient);
+
+        $token = 'access-token';
+        $bitlyClient = new BitlyClient($token);
+        $this->assertEquals($bitlyClient->accessToken(), $token);
+        unset($bitlyClient);
     }
 }
